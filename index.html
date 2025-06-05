@@ -13,7 +13,9 @@
 
     <main>
         <section class="audio-section">
-            <button onclick="document.getElementById('voice').play()">▶️ Hear The Letter From Your Older Self</button>
+            <button onclick="document.getElementById('voice').play()">▶️ Play (Hear Your Older Self)</button>
+            <button onclick="document.getElementById('voice').pause()">⏸ Pause</button>
+            <button onclick="resetAudio()">🔁 Restart</button>
             <audio id="voice" src="old_voice_letter.mp3" preload="auto"></audio>
         </section>
 
@@ -73,8 +75,14 @@
     <script>
         function scrollCarousel(direction) {
             const container = document.getElementById("carousel");
-            const itemWidth = container.querySelector(".carousel-item").offsetWidth + 16; // includes gap
+            const itemWidth = container.querySelector(".carousel-item").offsetWidth + 16;
             container.scrollLeft += direction * itemWidth;
+        }
+    
+        function resetAudio() {
+            const audio = document.getElementById("voice");
+            audio.currentTime = 0;
+            audio.play();
         }
     </script>
 </body>
