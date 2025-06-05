@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To My Younger Self</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>To My Younger Self</h1>
+        <p class="subtitle">A message from the future, with reflection and care.</p>
+    </header>
+
+    <main>
+        <section class="audio-section">
+            <button onclick="document.getElementById('voice').play()">▶️ Hear The Letter From Your Older Self</button>
+            <audio id="voice" src="old_voice_letter.mp3" preload="auto"></audio>
+        </section>
+
+        <section class="letter scrollable">
+            To my younger self  -
+            <br>
+        You will survive. Just two more months and you will get that degree you worked so hard for. Those endless hours you put in to your getting your internships – NASA, Accenture, VISA – all is going to pay off at the end. I know you feel dumb and inadequate in the field of software engineering; I know you feel as if you are a fraud with only surface level knowledge. But I am here to tell you that it is okay, you do end up gaining that technical foundation you wanted – desperately needed. You will succeed at Blue Origin. I know right now you fear being stuck in Seattle, but I am here to tell you how working there really opened your life – I mean who doesn’t love rockets! You made amazing friends, reconnected with old friends, and started a family. Yes, at first, you might have compared yourself to your friends and saw that they were making insane salaries right out of college, and you are going to feel inferior because you quote unquote went to a better school than them. But I am here to tell you that everyone has their own journey, and that you too will get the compensation you want. However, I am here to give you some advice: kill that ego of yours. I know internally you feel inadequate, and externally you put a front of cockiness, but you need to realize that some people will take that badly and that will deter you from many opportunities. Be humble, kind, and open to every opportunity. Seattle is a crazy world, and it seems like everyone is doing something cool and you should try to do as much as possible if you do not spread yourself too thin. Also, side note, get onto that LeetCode grind – that is the only way we can get that SWE role. 
+        Now, in terms of AI, I am not going to lie to you and act like it is not a widely integrated thing into the infrastructure of organizations, but the more I interact with LLMs I am seeing the vulnerabilities in the code being outputted. I know that ever since we were young, we wanted to get an MBA and follow our father’s footsteps, and to be frank I think consulting might be the move in the long run. The more I see this tech world, the more I think getting into AI consulting might be worth it. But we both know how expensive grad school is, and while we can afford it, I don’t know if it is quite worth it to shell $500k for a degree. Anyhow, this career stuff is boring. 
+        You remember how you always wanted that lake front house – Yea we got it in San Diego. It was a struggle though, not going to lie. Life is not easy for us, and we both know how much you have had to go through to get even where you are today. And I think this is why I wanted to write this letter to you. Recently, I have been reflecting on my life – you could say it is a byproduct of a mid-life crisis – and I wanted to let you know we do end up being happy. I think that our life especially in our teen years has been very up and down and you must be wondering if we ever get to be happy – if there is light at the end of our tunnel. I am here to tell you to that everything is going to be okay and just have faith in yourself and God. He has saved you many times before and will continue to do so in your current moment and in the future. 
+        <br>
+        -	From your future self </p>
+        </section>
+
+        <section class="gallery">
+            <h2>Memories from Our Life</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn left" onclick="scrollCarousel(-1)">❮</button>
+                <div class="carousel-view" id="carousel">
+                    <div class="carousel-item">
+                        <img src="images/Blue_Origin.jpg" alt="Blue Origin">
+                        <p>First Day at Blue Origin</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/launch1.jpg.webp" alt="Blue Origin Launch">
+                        <p>My First Launch</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/friends.jpg" alt="Fun in Seattle">
+                        <p>Going out with Friends</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/spaceneedle_14.png" alt="Exploring Seattle">
+                        <p>Exploring Seattle with my Friends</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/San_Diego_House.jpeg" alt="Moving to San Diego">
+                        <p>Moving to San Diego -> First House</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/family.png" alt="Family picture">
+                        <p> Family Picture </p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/playing_soccer.png" alt="Playing Soccer with the Fam">
+                        <p> Playing soccer with the family </p>
+                    </div>
+                </div>
+                <button class="carousel-btn right" onclick="scrollCarousel(1)">❯</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ by my future self</p>
+    </footer>
+
+    <script>
+        function scrollCarousel(direction) {
+            const container = document.getElementById("carousel");
+            const itemWidth = container.querySelector(".carousel-item").offsetWidth + 16; // includes gap
+            container.scrollLeft += direction * itemWidth;
+        }
+    </script>
+</body>
+</html>
